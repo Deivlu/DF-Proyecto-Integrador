@@ -1,0 +1,115 @@
+/* MAIN */
+
+.main {
+  grid-area: main;
+  background-color: #F9E0B7;
+}
+
+.main h2 {
+  font-size: 2rem;
+  background-color: #28120D;
+  text-align: center;
+  padding: 2rem;
+  animation: move 3s ease-in-out;
+  color: #F9E0B7;
+
+}
+
+.textomain {
+  padding: 1rem;
+
+  p {
+    @extend %estiloParrafo;
+  }
+}
+
+
+.maindemuebles {
+  grid-area: main;
+  background-color: #F9E0B7;
+}
+
+/* CONTENEDOR DE LAS IMAGENES DE MAIN */
+
+.separator {
+  font-size: 2rem;
+  text-align: left;
+  background-color: #28120D;
+  padding: 0.5rem;
+  margin-top: 0px;
+  text-align: center;
+  color: #F9E0B7;
+  text-shadow: none;
+}
+
+.contenedordeimg {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 4px;
+}
+
+.contenedordepagos {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 60%;
+  align-items: center;
+  margin: 4px;
+  padding: 10px;
+}
+
+.img-container {
+  max-width: 100%;;
+  border-radius: 50px;
+  border: 1em solid transparent;
+  background-color: #28120D;
+  margin: 5px;
+}
+
+/* RESPONSIVE DESIGN - MEDIA QUERY - MOBILE LAST */
+
+/* MOBILE LAST  = MAX-WIDTH*/
+@media (max-width:768px) {
+
+  .contenedordeimg {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    margin-left: 2px;
+  }
+}
+
+/* Dispositivos chicos // SM */
+@media (max-width:600px) {
+
+  .contenedordeimg {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    margin-left: 2px;
+
+    
+  }
+
+  .titulo {
+    font-size: 5rem;
+    text-align: center;
+    padding: 3rem;
+  }
+
+
+  .textomain {
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+}
